@@ -1,10 +1,21 @@
-public abstract class Pet {     // Здесь описываем общие свойства всех домашних любимцев
-    Master person; // Хозяин животного
-    int weight, age, eatTime1;   // Вес, возраст, время кормления
+// Здесь описываем общие свойства всех домашних любимцев
+public abstract class Pet {
+    // Хозяин животного
+    private Master person;
 
-    int eat(int food, int drink, int time, String korm) { // Процесс кормления
+    // Вес
+    private int weight;
+
+    // Возраст
+    private int age;
+
+    // Время кормления
+    private int eatTime;
+
+    // Процесс кормления
+    public int eat(int food, int drink, int time, String korm) {
         // Начальные действия...
-        if (time == eatTime1) {
+        if (time == eatTime) {
             person.getFood(food, drink, korm);
             return 1;
         } else return 0;

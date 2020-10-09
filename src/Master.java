@@ -1,11 +1,12 @@
 public class Master {
-    private final String name;  // Фамилия, имя
+    // Фамилия, имя
+    private String name;
 
-    Master(String Name) {
-        this.name = Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    String GetName() {
+    public String getName() {
         return this.name;
     }
 

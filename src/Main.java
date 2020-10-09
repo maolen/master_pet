@@ -1,10 +1,12 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Voice[] singer = new Voice[4];
-        singer[0] = new Dog();
-        singer[1] = new Cat();
-        singer[2] = new Cow();
-        singer[3] = new Bee();
-        for (Voice voice : singer) voice.voice();
+        ArrayList<IVoice> singer = new ArrayList<>();
+        singer.add(new Dog());
+        singer.add(new Cat());
+        singer.add(new Cow());
+        singer.add(new Bee());
+        for (IVoice voice : singer) voice.voice();
     }
 }
